@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("123.png") center/cover no-repeat fixed;
+    filter: blur(20px);
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+.card {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    animation: slideUp 0.8s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 4px solid #fff;
+}
+
+.profile h1 {
+    color: #2d3748;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.profile p {
+    color: #718096;
+    font-size: 16px;
+}
+
+.info {
+    margin: 25px 0;
+    text-align: left;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #fff;
+    padding: 12px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item span {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #4299e1;
+}
+
+.item a {
+    color: #2d3748;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.item p {
+    color: #4a5568;
+    margin: 0;
+}
+
+.save-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(66, 153, 225, 0.3);
+}
+
+.save-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(66, 153, 225, 0.4);
+}
